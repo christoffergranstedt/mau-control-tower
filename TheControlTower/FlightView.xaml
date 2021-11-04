@@ -1,0 +1,15 @@
+﻿<Window x:Class="TheControlTower.FlightWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TheControlTower"
+        mc:Ignorable="d"
+        Title="FlightWindow" Height="300" Width="350">
+    <Grid>
+        <Button x:Name="takeOffButton" Content="Start" HorizontalAlignment="Left" Margin="18,178,0,0" VerticalAlignment="Top" Width="60" Click="takeOffButton_Click" Height="22"/>
+        <ComboBox x:Name="changeRouteBox" HorizontalAlignment="Left" Margin="125,178,0,0" VerticalAlignment="Top" Width="80" IsEnabled="False" SelectionChanged="changeRouteBox_SelectionChanged"/>
+        <Button x:Name="landButton" Content="Land" HorizontalAlignment="Left" Margin="254,178,0,0" VerticalAlignment="Top" Width="60" IsEnabled="False" Click="landButton_Click" Height="22"/>
+        <Image x:Name="imageAirplane" HorizontalAlignment="Left" Height="159" Margin="24,6,0,0" VerticalAlignment="Top" Width="295"/>
+    </Grid>
+</Window>

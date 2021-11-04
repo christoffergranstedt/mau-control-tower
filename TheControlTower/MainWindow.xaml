@@ -1,0 +1,29 @@
+﻿<Window x:Class="TheControlTower.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TheControlTower"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="650">
+    <Grid Margin="0,0,51,0">
+        <Button x:Name="sendAirplaneButton" Content="Send next Airplane to Runway" HorizontalAlignment="Left" Margin="317,298,0,0" VerticalAlignment="Top" Width="307" Height="33" Click="SendAirplaneButton_OnClick"/>
+        <Label x:Name="flightCodeLabel" Content="Next Flight:" HorizontalAlignment="Left" Margin="24,301,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="flightCodeInput" HorizontalAlignment="Left" Height="23" Margin="116,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ListView x:Name="controlTowerList" HorizontalAlignment="Left" Height="257" Margin="24,21,0,0" VerticalAlignment="Top" Width="600">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="200" DisplayMemberBinding="{Binding Path=FlightCode}">Flight Code</GridViewColumn>
+                    <GridViewColumn Width="200" DisplayMemberBinding="{Binding Path=FlightEvent}">Status</GridViewColumn>
+                    <GridViewColumn Width="200" DisplayMemberBinding="{Binding Path=EventTime}">Time</GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>
